@@ -1,0 +1,24 @@
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
+//normalize include
+@import "vendors/normalize.scss";
+
+
+// Core And Components
+@import
+  //core
+  "core/faifumo.vars"
+
+  //components
+  ,"components/faifumo.button"
+  ,"components/faifumo.flex"
+  ,"components/faifumo.form"
+  ,"components/faifumo.grid"
+  ,"components/faifumo.list"
+  ,"components/faifumo.table"
+  ,"components/faifumo.typography"
+  
+  //themes
+  ,"themes/faifumo.basic"
+;

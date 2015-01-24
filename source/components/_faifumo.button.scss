@@ -1,0 +1,21 @@
+.button, button, input[type="submit"], input[type="reset"], input[type="button"]{
+  display                     : inline-block;
+  height                      : $FORM_HEIGHT;
+  padding                     : 0 (1 * $UNIT);
+  margin-bottom               : $UNIT;
+  font-size                   : $FONT_SIZE_TINY;
+  font-weight                 : 600;
+  line-height                 : $FORM_HEIGHT;
+  text-align                  : center;
+  letter-spacing              : .1rem;
+  text-transform              : uppercase;
+  text-decoration             : none;
+  white-space                 : nowrap;
+  background-color            : transparent;
+  cursor                      : pointer;
+  box-sizing                  : border-box;
+  &:hover, &:focus{
+    outline                   : 0
+  }
+}
+

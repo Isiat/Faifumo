@@ -1,0 +1,150 @@
+// --  Methods -----------------------------------------------------------
+@mixin vendor($name, $argument) {
+  -webkit-#{$name}: #{$argument};
+  -ms-#{$name}: #{$argument};
+  -moz-#{$name}: #{$argument};
+  -o-#{$name}: #{$argument};
+  #{$name}: #{$argument};
+}
+@mixin display-flex() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($arguments){
+@include vendor('flex', $arguments);
+}
+
+@mixin flex-direction($arguments){
+@include vendor('flex-direction', $arguments);
+}
+
+@mixin flex-grow($arguments){
+@include vendor('flex-grow', $arguments);
+}
+
+@mixin flex-flow($arguments){
+@include vendor('flex-flow', $arguments);
+}
+
+@mixin flex-wrap($arguments){
+@include vendor('flex-wrap', $arguments);
+}
+
+@mixin flex-shrink($arguments){
+@include vendor('flex-shrink', $arguments);
+}
+
+@mixin justify-content($arguments){
+@include vendor('justify-content', $arguments);
+}
+
+@mixin align-content($arguments){
+@include vendor('align-content', $arguments);
+}
+
+@mixin align-items($arguments){
+@include vendor('align-items', $arguments);
+}
+
+@mixin order($arguments){
+@include vendor('order', $arguments);
+}
+
+@mixin align-self($arguments){
+@include vendor('align-self', $arguments);
+}
+// -- /Stylus Methods ----------------------------------------------------------
+
+[data-flex]{
+  @include display-flex;
+  body{
+    position                  : absolute;
+    left                      : 0;
+    top                       : 0;
+    bottom                    : 0;
+    width                     : 100%;
+    overflow                  : hidden;
+  }
+
+  .scroll{
+    overflow-x                : hidden;
+    overflow-y                : scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+
+// -- Direction ----------------------------------------------------------------
+[data-flex^="horizontal"]{
+  @include flex-direction(row);
+}
+[data-flex^="vertical"]{
+  @include flex-direction(column);
+}
+// -- Size ---------------------------------------------------------------------
+[data-flex*="grow"]{
+  > *:not([data-column]):not([data-flex-grow]){
+    @include flex-grow(1);
+  }
+}
+[data-flex-grow="min"]{
+  @include flex-grow(0);
+}
+
+[data-flex-grow="max"]{
+  @include flex-grow(2);
+}
+
+// -- Container properties -----------------------------------------------------
+[data-flex*="wrap"]{
+  @include flex-wrap(wrap);
+}
+
+[data-flex*="center"]{
+  @include justify-content(center);
+  @include align-content(center);
+  @include align-items(center);
+}
+
+[data-flex-justify="start"]{
+  @include justify-content(flex-start);
+}
+[data-flex-justify="center"]{
+  @include justify-content(center);
+}
+[data-flex-justify="end"]{
+  @include justify-content(flex-end);
+}
+
+[data-flex-content="start"]{
+  @include align-content(flex-start);
+}
+[data-flex-content="center"]{
+  @include align-content(center);
+}
+[data-flex-content="end"]{
+  @include align-content(flex-end);
+}
+
+[data-flex-items="center"]{
+  @include align-items(center);
+}
+[data-flex-items="start"]{
+  @include align-items(flex-start);
+}
+[data-flex-items="end"]{
+  @include align-items(flex-end);
+}
+
+// -- Children properties ------------------------------------------------------
+[data-flex-order="first"]{
+  @include order(-1);
+}
+
+[data-flex-order="last"]{
+  @include order(999999);
+}

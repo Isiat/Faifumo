@@ -1,0 +1,21 @@
+ul{
+  list-style      : circle inside;
+}
+ol{
+  list-style      : decimal inside;
+}
+ol, ul{
+  padding-left    : 0;
+  &.none{
+    list-style: none;
+    margin-top: 0;
+ }
+}
+ul ul, ul ol, ol ol, ol ul{
+  margin          : .5rem 0 0 1rem;
+  font-size       : $FONT_SIZE_SMALL;
+}
+li{
+  margin-bottom   : 1rem;
+
+}
