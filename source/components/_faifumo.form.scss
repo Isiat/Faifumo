@@ -39,10 +39,20 @@ input[type="checkbox"], input[type="radio"]{
   display                     : inline;
 }
 
-label > span{
-  display                     : inline-block;
-  margin-left                 : ($UNIT / 2);
-  font-weight                 : normal;
+label {
+  > em {
+    font-style: normal;
+    font-size: $UNIT;
+    color: $ERROR_COLOR;
+    display: inline-block;
+    vertical-align: sub;
+    line-height: 1;
+  }
+  > span{
+    display                     : inline-block;
+    margin-left                 : ($UNIT / 2);
+    font-weight                 : normal;
+  }
 }
 input, textarea, select, fieldset{
   margin-bottom               : $UNIT;
