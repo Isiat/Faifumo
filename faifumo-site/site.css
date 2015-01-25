@@ -13,8 +13,7 @@ body[data-flex] {
   overflow: hidden;
 }
 
-aside {}
-  aside header, ul, footer {
+  aside header, aside ul, footer {
     padding: 1rem 1.5rem;
   }
   aside header {
@@ -51,7 +50,6 @@ aside {}
       margin-left: .5rem;
       font-weight: bold;
     }
-
 
 .landing {
   margin: 5rem 0;

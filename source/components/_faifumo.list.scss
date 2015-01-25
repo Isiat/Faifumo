@@ -11,11 +11,14 @@ ol, ul{
     margin-top: 0;
  }
 }
-ul ul, ul ol, ol ol, ol ul{
-  margin          : .5rem 0 0 1rem;
-  font-size       : $FONT_SIZE_SMALL;
+/*  sublists */
+li{ 
+	ul,ol{
+  		margin          : ($UNIT / 2) 0 0 $UNIT;
+  		font-size       : $FONT_SIZE_SMALL;
+	}
 }
 li{
-  margin-bottom   : 1rem;
+  margin-bottom   : $UNIT;
 
 }

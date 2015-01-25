@@ -7,7 +7,7 @@
   font-weight                 : 600;
   line-height                 : $FORM_HEIGHT;
   text-align                  : center;
-  letter-spacing              : .1rem;
+  letter-spacing              : ($UNIT / 10);
   text-transform              : uppercase;
   text-decoration             : none;
   white-space                 : nowrap;
