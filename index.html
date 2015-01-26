@@ -236,12 +236,12 @@
                 </td>
                 <td>-$15.69</td>
               </tr>
-              <tr>
-                <td colspan="3">
-                </td>
-                <td><strong>$141.21</strong></td>
-              </tr>
             </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="4" class="tr"><strong>$141.21</strong></td>
+              </tr>
+            </tfoot>
           </table>
         </section>
 
@@ -289,7 +289,7 @@
           <p>Forms are a huge pain, but hopefully these styles make it a bit easier. All inputs, select, and buttons are normalized for a common height cross-browser so inputs can be stacked or placed alongside each other.</p>
         </section>
         <form>
-          <div class="row">
+          <fieldset>
             <div data-column="6">
               <label for="exampleEmailInput">Your email <em>*</em></label>
               <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput" required>
@@ -302,7 +302,6 @@
                 <option value="Option 3">Can I get your number?</option>
               </select>
             </div>
-          </div>
           <label for="exampleMessage">Message</label>
           <textarea class="u-full-width" placeholder="Hi Dave …" id="exampleMessage"></textarea>
           <label class="example-send-yourself-copy">
@@ -310,6 +309,7 @@
             <span class="label-body">Send a copy to yourself</span>
           </label>
           <input class="primary" type="submit" value="Submit">
+        </fieldset>
         </form>
 
         <!-- MEDIA QUERIES ------------------------------------------------- -->
