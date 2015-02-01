@@ -11,7 +11,7 @@
   margin                    : 0 auto;
   padding                   : 0;
 }
-.container, .container > section, #grid .content > div {
+.container, .container > section, #grid .content > div , .cf{
   &:after{
     content                 : "";
     display                 : table;

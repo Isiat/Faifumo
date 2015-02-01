@@ -292,11 +292,15 @@
         
        <!-- CODE ---------------------------------------------------------- -->
         <section id="code">
-          <header><h1>CODE</h1></header>
+          <header><h1>CODE</h1>
           <p>Code styling is kept basic – just wrap anything in a <code>&lt;code&gt;</code> and it will appear like <code>this</code>. For blocks of code, wrap a <code>&lt;code&gt;</code> with a <code>&lt;pre&gt;</code>.</p>
+          </header>
+          <div class="content">
           <pre><code>.some-class {
   background-color: red;
-}</code></pre>
+}</code></pre>       
+          </div>
+
         </section>
 
         <!-- FORM ---------------------------------------------------------- -->
@@ -341,19 +345,19 @@
               Faifumo CSS uses media queries to serve its scalable grid, but also has a list of queries for convenience of styling your site across devices. The queries are mobile-first, meaning they target min-width. Mobile-first queries are how Faifumo CSS's grid is built and is the preferrable method of organizing CSS. It means all styles outside of a query apply to all devices, then larger devices are targeted for enhancement. This prevents small devices from having to parse tons of unused CSS. The sizes for the queries are:
             </p>
           </header>
-        </section>
-        <section>
-          <ul data-column="6">
-            <li><strong>Desktop HD:</strong>1200px</li>
-            <li><strong>Desktop:</strong>1000px</li>
-            <li><strong>Tablet:</strong>750px</li>
-          </ul>
-          <ul data-column="6">
-            <li><strong>Phablet:</strong>550px</li>
-            <li><strong>Mobile:</strong>400px</li>
-          </ul>
-        </section>
-        <section>
+          <div class="content">
+            <div class="cf">
+              <ul data-column="6">
+                <li><strong>Desktop HD:</strong>1200px</li>
+                <li><strong>Desktop:</strong>1000px</li>
+                <li><strong>Tablet:</strong>750px</li>
+              </ul>
+              <ul data-column="6">
+                <li><strong>Phablet:</strong>550px</li>
+                <li><strong>Mobile:</strong>400px</li>
+              </ul>
+            </div>
+            <div>
           <pre><code>/* Mobile first queries */
 
 /* Larger than mobile */
@@ -370,10 +374,13 @@
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}</code></pre>
+        </div>
+          </div>
         </section>
 
 
-        <!-- MEDIA QUERIES ------------------------------------------------- -->
+
+        <!-- FLEX LAYOUT ------------------------------------------------- -->
         <section id="flex-layout">
           <header><h1>FLEXBOX LAYOUT</h1></header>
           <p>
