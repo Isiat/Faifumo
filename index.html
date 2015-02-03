@@ -494,13 +494,14 @@
 
         <!-- FLEX: Justity ------------------------------------------------- -->
         <section id="flex-justify">
-          <header><h1>Justify</h1></header>
-          <p>
+          <header>
+            <h1>Justify</h1>
+             <p>
             Use the attribute <code>data-flex-justify</code> to set the justify of the items contained in a <code>data-flex</code> element:
           </p>
-        </section>
-        <section>
-          <div data-column="4">
+          </header>
+         <div class="content cf">
+            <div data-column="4">
             <strong>"start"</strong>
             <div data-flex="horizontal wrap"  data-flex-justify="start" class="box-container">
               <div class="box">one</div>
@@ -524,39 +525,42 @@
               <div class="box">three</div>
             </div>
           </div>
+         </div>
         </section>
 
         <!-- FLEX: Items --------------------------------------------------- -->
         <section id="flex-align">
-          <header><h1>Align items</h1></header>
-          <p>
+          <header>
+            <h1>Align items</h1>
+            <p>
             Use the attribute <code>data-flex-items</code> to set the items of the items contained in a <code>data-flex</code> element:
           </p>
-        </section>
-        <section>
-          <div data-column="4">
-            <strong>"start"</strong>
-            <div data-flex="horizontal wrap"  data-flex-items="start" class="box-container">
-              <div class="box">one</div>
-              <div class="box">two</div>
-              <div class="box">three</div>
-            </div>
-          </div>
-          <div data-column="4">
-            <strong>"center"</strong>
-            <div data-flex="horizontal wrap"  data-flex-items="center" class="box-container">
-              <div class="box">one</div>
-              <div class="box">two</div>
-              <div class="box">three</div>
-            </div>
-          </div>
-          <div data-column="4">
-            <strong>"end"</strong>
-            <div data-flex="horizontal wrap"  data-flex-items="end" class="box-container">
-              <div class="box">one</div>
-              <div class="box">two</div>
-              <div class="box">three</div>
-            </div>
+          </header>
+          <div class="content cf">
+             <div data-column="4">
+                <strong>"start"</strong>
+                <div data-flex="horizontal wrap"  data-flex-items="start" class="box-container">
+                  <div class="box">one</div>
+                  <div class="box">two</div>
+                  <div class="box">three</div>
+                </div>
+              </div>
+              <div data-column="4">
+                <strong>"center"</strong>
+                <div data-flex="horizontal wrap"  data-flex-items="center" class="box-container">
+                  <div class="box">one</div>
+                  <div class="box">two</div>
+                  <div class="box">three</div>
+                </div>
+              </div>
+              <div data-column="4">
+                <strong>"end"</strong>
+                <div data-flex="horizontal wrap"  data-flex-items="end" class="box-container">
+                  <div class="box">one</div>
+                  <div class="box">two</div>
+                  <div class="box">three</div>
+                </div>
+              </div>
           </div>
         </section>
 
