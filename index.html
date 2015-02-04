@@ -61,7 +61,7 @@
               </p>
           </div>
         </section>
-
+        <!-- GRID -------------------------------------------------------- -->
         <section id="grid">
          <header>
             <h1>THE GRID</h1>
@@ -422,7 +422,7 @@
           </div>
         </section>
 
-
+        <!-- FLEX: Grow ------------------------------------------------- -->
         <section id="flex-grow">
           <header>
             <h1>Growing items</h1>
@@ -566,14 +566,14 @@
 
         <!-- FLEX: Wrap ---------------------------------------------------- -->
         <section id="flex-wrap">
-          <header><h1>Wrapping elements</h1></header>
-          <p>
+          <header>
+            <h1>Wrapping elements</h1>
+            <p>
             Sometimes your items have dimensions and therefore cannot be resized. In case the container can not contain more elements in the same row / column these elements jump to a new row / column.
           </p>
-        </section>
-
-        <section>
-          <div data-column="6">
+          </header>
+          <div class="content cf">
+                      <div data-column="6">
             <strong>"normal"</strong>
             <div data-flex="horizontal wrap" class="box-container">
               <div class="box">one</div>
@@ -607,66 +607,69 @@
   &lt;div&gt;three&lt;/div&gt;
 &lt;/div&gt;</code></pre>
             </div>
+          </div>
         </section>
 
         <!-- FLEX: Content ------------------------------------------------- -->
-        <section>
-          <header><h1>Justify Content</h1></header>
-          <p>
-            Use the attribute <code>data-flex-content</code> to set the direction of the items contained in a <code>data-flex</code> element:
-          </p>
-        </section>
-        <section>
-          <div data-column="4">
-            <strong>data-flex-content="start"</strong>
-            <div data-flex="horizontal wrap"  data-flex-content="start" class="box-container">
-              <div class="box">one</div>
-              <div class="box">two</div>
-              <div class="box">three</div>
-              <div class="box">four</div>
-              <div class="box">five</div>
-              <div class="box">six</div>
-            </div>
-          </div>
-          <div data-column="4">
-            <strong>data-flex-content="center"</strong>
-            <div data-flex="horizontal wrap"  data-flex-content="center" class="box-container">
-              <div class="box">one</div>
-              <div class="box">two</div>
-              <div class="box">three</div>
-              <div class="box">four</div>
-              <div class="box">five</div>
-              <div class="box">six</div>
-            </div>
-          </div>
-          <div data-column="4">
-            <strong>data-flex-content="end"</strong>
-            <div data-flex="horizontal wrap"  data-flex-content="end" class="box-container">
-              <div class="box">one</div>
-              <div class="box">two</div>
-              <div class="box">three</div>
-              <div class="box">four</div>
-              <div class="box">five</div>
-              <div class="box">six</div>
-            </div>
+        <section id="flex-justify-content">
+          <header>
+            <h1>Justify Content</h1>
+            <p>
+              Use the attribute <code>data-flex-content</code> to set the direction of the items contained in a <code>data-flex</code> element:
+            </p>
+          </header>
+          <div class="content cf">
+              <div data-column="4">
+                  <strong>data-flex-content="start"</strong>
+                  <div data-flex="horizontal wrap"  data-flex-content="start" class="box-container">
+                    <div class="box">one</div>
+                    <div class="box">two</div>
+                    <div class="box">three</div>
+                    <div class="box">four</div>
+                    <div class="box">five</div>
+                    <div class="box">six</div>
+                  </div>
+                </div>
+                <div data-column="4">
+                  <strong>data-flex-content="center"</strong>
+                  <div data-flex="horizontal wrap"  data-flex-content="center" class="box-container">
+                    <div class="box">one</div>
+                    <div class="box">two</div>
+                    <div class="box">three</div>
+                    <div class="box">four</div>
+                    <div class="box">five</div>
+                    <div class="box">six</div>
+                  </div>
+                </div>
+                <div data-column="4">
+                  <strong>data-flex-content="end"</strong>
+                  <div data-flex="horizontal wrap"  data-flex-content="end" class="box-container">
+                    <div class="box">one</div>
+                    <div class="box">two</div>
+                    <div class="box">three</div>
+                    <div class="box">four</div>
+                    <div class="box">five</div>
+                    <div class="box">six</div>
+                  </div>
+                </div>
           </div>
         </section>
 
         <!-- FLEX: Order --------------------------------------------------- -->
         <section id="flex-order">
-          <header><h1>Order items</h1></header>
-          <p>
-            You can re-order items using the attribute <code>data-flex-order</code>.
-          </p>
-        </section>
-
-        <section>
-          <div data-column="6">
+          <header>
+              <h1>Order items</h1>
+              <p>
+                You can re-order items using the attribute <code>data-flex-order</code>.
+              </p>
+            </header>
+          <div class="content cf">
+               <div data-column="6">
             <strong>horizontal</strong>
             <div data-flex="horizontal" class="box-container">
-              <div data-flex-order="last">one</div>
+              <div class="box" data-flex-order="last">one</div>
               <div class="box">two</div>
-              <div data-flex-order="first">three</div>
+              <div class="box" data-flex-order="first">three</div>
             </div>
             <pre><code>&lt;div data-flex="horizontal"&gt;
   &lt;div data-flex-order="last"&gt;one&lt;/div&gt;
@@ -677,15 +680,16 @@
           <div data-column="6">
             <strong>vertical</strong>
             <div data-flex="vertical" class="box-container">
-              <div data-flex-order="last">one</div>
+              <div class="box" data-flex-order="last">one</div>
               <div class="box">two</div>
-              <div data-flex-order="first">three</div>
+              <div class="box" data-flex-order="first">three</div>
             </div>
             <pre><code>&lt;div data-flex="vertical"&gt;
   &lt;div data-flex-order="last"&gt;one&lt;/div&gt;
   &lt;div&gt;two&lt;/div&gt;
   &lt;div data-flex-order="first"&gt;three&lt;/div&gt;
 &lt;/div&gt;</code></pre>
+          </div>
           </div>
         </section>
       </div>
