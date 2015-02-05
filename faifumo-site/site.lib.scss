@@ -1,0 +1,54 @@
+//import the lib
+@import "../source_lib/faifumo.lib";
+
+#grid {
+	main > div {
+		@include row;
+		margin-bottom: 10px;
+	}
+
+	[data-column="1"] {
+		@include column(1);
+	}
+	[data-column="2"] {
+		@include column(2);
+	}
+	[data-column="3"] {
+		@include column(3);
+	}
+	[data-column="4"] {
+		@include column(4);
+	}
+	[data-column="5"] {
+		@include column(5);
+	}
+	[data-column="6"] {
+		@include column(6);
+	}
+	[data-column="7"] {
+		@include column(7);
+	}
+	[data-column="8"] {
+		@include column(8);
+	}
+	[data-column="9"] {
+		@include column(9);
+	}
+	[data-column="10"] {
+		@include column(10);
+	}
+	[data-column="11"] {
+		@include column(11);
+	}
+	[data-column="12"] {
+		@include column(12);
+	}
+
+	[data-column] {
+	  padding: 0.25rem 0.75rem;
+	  font-size: 75%;
+	  border-radius: 2px;
+	  color: rgba(255,255,255,0.75);
+	  background-color: #007FFF;
+	}
+}

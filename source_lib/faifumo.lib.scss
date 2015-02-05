@@ -1,0 +1,14 @@
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
+//normalize include
+@import "vendors/normalize.scss";
+
+// Core And Components
+@import
+  //functions
+  "functions"
+  //components
+  ,"components/faifumo.lib.grid"
+  
+;
