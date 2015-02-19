@@ -10,6 +10,12 @@ $total-width: 100%;
 @mixin row($columns:$columns) {
 	display: block;
 	@include clearfix();
+
+	> [data-column] {
+		&:last-child{
+			margin-right:0;
+		}
+	}
 }
 @mixin column($size_col,$cols_in_row) {
 	box-sizing: border-box;
